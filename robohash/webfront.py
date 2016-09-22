@@ -208,7 +208,7 @@ class MainHandler(tornado.web.RequestHandler):
         ("Man shouldn't know where their robots come from.","Dr. N. Soong, FutureBeat")]
 
         random.shuffle(drquotes)
-        self.write(self.render_string('templates/root.html',ip=ip,robo=random.choice(robo),drquote1=drquotes[1],drquote2=drquotes[2],quotes=quotes))
+        self.write(self.render_string('templates/root.html',ip=ip,robo=random.choice(robo),drquote1=drquotes[1],drquote2=drquotes[2],quotes=quotes,host=self.request.host))
 
 class ImgHandler(tornado.web.RequestHandler):
     """

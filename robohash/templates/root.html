@@ -158,7 +158,7 @@ $(document).ready(function(){
 <div class="left_content" style="position:relative; top:40px">
 
   <img src="/{{ip}}.png" alt="You!" class="left" id="idimg" /><br>
-  <p id='YourIP'><br>https://robohash.org/{{ip}}.png</p>
+  <p id='YourIP'><br>https://{{host}}/{{ip}}.png</p>
 </div><!-- end of left content section -->
 
 <!-- start of right content section -->
@@ -195,7 +195,7 @@ function submitform()
 {
    var x = document.getElementById("idimg");
    x.setAttribute("src", "/" +  document.getElementById("textform").query.value );
-   $("#YourIP").text( "https:/" + document.getElementById("textform").query.value);
+   $("#YourIP").text( "https://{{host}}/" + document.getElementById("textform").query.value);
 }
 </script>
 
@@ -515,10 +515,10 @@ function submitform()
   </p><p>
     For Gravatar enthusiasts, you can ask Robohash to use a Gravatar if one is available.<br>
     Put either the email, or the hashed version, in your image where the string normally goes -<br><br>
-    For example: https:/colin@robohash.org?gravatar=yes<br> or https:/620050a4db5104bae758cd75171d64ca?gravatar=hashed
+    For example: https://{{host}}/colin@robohash.org?gravatar=yes<br> or https://{{host}}/620050a4db5104bae758cd75171d64ca?gravatar=hashed
     </p><p>
     <p>Both traditional and new Stealthy (https) robots are available.</p>
-    <p>We've also conditioned our robots to accept commands either via params or directories-<br> For instance https:/set_set3/bgset_bg1/3.14159?size=500x500
+    <p>We've also conditioned our robots to accept commands either via params or directories-<br> For instance https://{{host}}/set_set3/bgset_bg1/3.14159?size=500x500
     <p>Finally, the <a href="https://github.com/e1ven/Robohash">Blueprints are available</a> to build your own robotic
     factory.</p>
 </p>
